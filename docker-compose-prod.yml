@@ -1,0 +1,23 @@
+version: '3'
+services:
+  simba-app:
+    build:
+      context: ./project-simba
+      dockerfile: Dockerfile.prod
+      args:
+        - VITE_GOOGLE_CLIENT_ID=47486610517-t9ud3tdqpeg8bfakjq4q6d4ifo2jouhq.apps.googleusercontent.com
+        - VITE_GOOGLE_CLIENT_SECRET=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
+        - VITE_GOOGLE_AUTHORIZE_URI=https://accounts.google.com/o/oauth2/v2/auth
+        - VITE_GOOGLE_API_KEY=AIzaSyAPntoK49iC9dPrr3RrBLeUnCn3CWWH_jA
+        - VITE_GOOGLE_PLAYLIST_API_KEY=AIzaSyAPntoK49iC9dPrr3RrBLeUnCn3CWWH_jA
+        - VITE_YOUTUBE_CHANNEL_ID=UCQV6pkNkEGBpQXzCh4G19WQ
+        - VITE_YOUTUBE_PLAYLIST_ID=UUQV6pkNkEGBpQXzCh4G19WQ
+        - VITE_AFREECA_BJID=affifaonline
+        - VITE_CHZZK_NID_AUT=vMlcIVlWMIcsCBjJZhWHd0BfNjvzRQJz5lq16IwhjubtM3Ke0fIxDDpIyTgFAYX5
+        - VITE_CHZZK_NID_SES=AAABhw9sfvU/0nvZceJ5YC5Z/CXPOAfQ4OqqxeV6YWkWnHUrLt57S+k57n9evpLGtVUbWo0bCmbR1NYdc7utyUKb9DK62eJP1OTD1Wu7uO+CRl8XIJ8q9oi4HyQiurnk7S+/2HdradxOgiTWu/7mnoEbpvdvX9G57P4Lrs+IRcNZLEELrZ0YSHf49OvmUYo2amhkuYMbqoJttnwu/H+0Fp/oRefyYzMJnSQQM4aZ/OhDwZB1qmTJY42rQP1E6RW94sfDJClHxJz6ucdjkTe3YsHTMNkaxZsOoWJw4YmJ4VsGx/TGa4QSjfspieLWKjJKLZ9KBgiT6Q7mZ3qa6SVXD7amoo0GFw0O4Y35ZZopd58/rotqDS52K0HhJv0jwa/9NEIES+H7SxHxOTPZi4VeYZVzApzLO/TgKiK9Sr01IZyVAubi70/Yq7JCVF7bQkS2tOfBpLOWce+UYHfhLLU6iRL+2m1Ft+eUb0TLfxuj18x75+Gw/AIHyZ5jurBcCWmbVHqiCnchqceM0ZCXyUcWpkU8jnU=
+        - VITE_TWITCH_CLIENT_ID=35ra0agnnzfasmsxpbd2g7mm5w9i16
+        - VITE_TWITCH_CLIENT_SECRET=l5z7pbri2itiw34pva1ra5mhh9b1ry
+        - VITE_TWITCH_GRANT_TYPE=client_credentials
+
+    ports:
+      - '8080:80'
